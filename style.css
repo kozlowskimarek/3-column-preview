@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--very-light-gray);
+  flex-direction: column;
+}
+
+.card-container {
+  display: flex;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.left {
+  background-color: var(--bright-orange);
+}
+
+.center {
+  background-color: var(--dark-cyan);
+}
+
+.right {
+  background-color: var(--very-dark-cyan);
+}
+
+.content {
+  padding: 47px;
+}
+
+img {
+  transform: scale(0.9);
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  font-size: 40px;
+  margin-top: 35px;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+  margin-top: 35px;
+  min-height: 200px;
+  line-height: 24px;
+}
+
+button {
+  font-family: "Lexend Deca", sans-serif;
+  /* margin-top: 80px; */
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.left button {
+  color: var(--bright-orange);
+}
+
+.center button {
+  color: var(--dark-cyan);
+}
+
+.right button {
+  color: var(--very-dark-cyan);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: "Lexend Deca";
+  margin-bottom: 10px;
+}
+.attribution a {
+  color: var(--bright-orange);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 740px) {
+  button {
+    font-size: 12px;
+    padding: 10px 15px;
+    margin-top: 20px;
+  }
+
+  .card-container {
+    height: 550px;
+  }
+
+  p {
+    min-height: 240px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+    max-width: 80%;
+  }
+
+  p {
+    min-height: auto;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+}
